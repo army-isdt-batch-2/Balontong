@@ -1,6 +1,6 @@
 @php $active = 'departments' @endphp
 @extends('layouts.main')
-@section('title','departments')
+@section('title','departments test')
 @section('content')
 <div class="container">
     <div class="card">
