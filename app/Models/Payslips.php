@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Payslips extends Model
 {
     use HasFactory;
+
+    protected $table = "payslips";
+
+    protected $fillable = [
+        'cutoff_start',
+        'cutoff_end'
+        
+    ];
 }

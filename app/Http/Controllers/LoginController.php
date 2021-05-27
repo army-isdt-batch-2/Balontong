@@ -2,10 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Department;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
+    protected $request;
+
+    public function __construct(Request $request)
+    {
+        $this->request = $request;
+    }
+
     public function index()
     {
         return view('login');
@@ -21,10 +30,7 @@ class LoginController extends Controller
         return view('layout');
     }
     
-    public function departments()
-    {
-        return view('departments');
-    }
+    
     
     public function employees()
     {
@@ -61,10 +67,7 @@ class LoginController extends Controller
         return view('form');
     }
     
-    public function departments_create()
-    {
-        return view('create_form.departments');
-    }
+    
     
     public function employees_create()
     {
@@ -105,4 +108,7 @@ class LoginController extends Controller
     {
         return view('view.timekeeping');
     }
+
+   
+
 }
